@@ -18,18 +18,18 @@ const AsyncNoMatch = importedComponent(
   }
 );
 
-const App = () => {
-  return (
-    <Router>
-      <div>
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/dynamic" component={AsyncDynamicPage} />
           <Route component={AsyncNoMatch} />
         </Switch>
-      </div>
-    </Router>
-  );
+      </Router>
+    )
+  };
 };
 
 export default App;
